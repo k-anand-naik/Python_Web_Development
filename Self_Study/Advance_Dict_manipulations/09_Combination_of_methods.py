@@ -64,11 +64,11 @@ transactions = [
     {"type":"expandeture", "amount":110}
 ]
 
-def filterd_data(transactions):
+def filtered_data(transactions):
     return filter(lambda t: t["type"] == "income", transactions)
 
 def map_data(transactions):
-    return map(lambda t: t["amount"], filterd_data(transactions))
+    return map(lambda t: t["amount"], filtered_data(transactions))
 
 def reduce_data(transactions):
     return reduce(
